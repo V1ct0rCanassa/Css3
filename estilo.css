@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100;0,200;0,300;1,100;1,200&family=Montserrat:wght@200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1, p{
+    font-family: 'Inter Tight', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    min-height: 100vh;
+}
+h1{
+   text-align: center;
+   margin-top: -90%;
+   position: absolute;
+}
+/*Celular Dejair*/
+#celldeja{
+    position: relative;
+    width: 300px;
+    height: 600px;
+    background-color: #666;
+    border-radius: 50px;
+}
+#celldeja:before{
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background-color: black;
+    border-radius: 48px;
+}
+/*Dentro/Tela*/
+.dentro{
+    position: absolute;
+    inset: 3px;
+    background:  url(img/Fotodejair.jpeg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 48px;
+    border:  10px solid black;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition: 2s;
+}
+#celldeja:hover .dentro{
+    opacity: 1;
+}
+/*Botões*/
+.btn{
+    position: absolute;
+    top: 110px;
+    left: -2px;
+    width: 3px;
+    height: 26px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background: radial-gradient(#ccc, #666, #222);
+    z-index: 10;
+}
+.btn.btn2{
+    top: 160px;
+    height: 40px;
+}
+.btn.btn3{
+    top: 220px;
+    height: 40px;
+}
+.rightSidebtn{
+    position: absolute;
+    top: 170px;
+    right: -2px;
+    width: 3px;
+    height:  70px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background: radial-gradient(#ccc, #666, #222);
+    z-index: 10;
+}
+/*Camera*/
+.camera{
+    position: absolute;
+    margin-top: -10px;
+    width: 60px;
+    height: 25px;
+    background-color:  black;
+    border-radius: 100px;
+    
+}
+#bolota{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    margin-top: 7px;
+    margin-left: 25px;
+    background-color: #ccc;
+    border-radius: 100%;
+}
+/*Apps*/
+#app{
+    position: absolute;
+    width: 270px;
+    margin-top: 440px;
+}
+#barra1 li{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+#barra2 li{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+/*Safari*/
+.safari{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+.circle_lines{
+    position: absolute;
+    inset: 5px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#1ec9ff, #2971e7);
+}
+.niddle{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+}
+.niddle img{
+    width: 250%;
+    position: absolute;
+    top: -5px;
+    left: -22px;
+}
+.niddle img:hover {
+    animation: rotation 1.3s linear infinite;
+}
+/*Tinder*/
+#icon1{
+    background-color: rgb(200, 6, 10);
+    width: 50px;
+    height: 50px;
+    margin-left: 30px;
+    border-radius: 10px;
+    transition: 2s;
+    position: absolute;
+}
+#icon1 img{
+    width: 75%;
+    margin-top: 15%;
+    margin-left: 12%;
+    transform: rotate( 0deg) scale(1);
+    animation: pulse 1s linear infinite;
+}
+@keyframes pulse {
+    0%{
+        transform: rotate(0deg) scale(1);
+    }
+    10%{
+        transform: rotate(0deg) scale(1.2);
+    }
+}
+#icon1:hover{
+    background-color: #ffffff;
+}
+/*Config*/
+#icon2{
+    background-color: #969592;
+    width: 50px;
+    height: 50px;
+    margin-left: 56px;
+    border-radius: 10px;
+    position: absolute;
+}
+#icon2:hover{
+    background-color: #6e6e6e;
+}
+#icon2 img{
+    width: 100%;
+}
+#icon2 img:hover{
+    animation: rotation 1.3s linear infinite;
+}
+@keyframes rotation{
+    from  {
+        transform:  rotate(0deg);
+    }  
+    to{
+        transform: rotate(360deg);
+    }
+}
+/*Amazon*/
+#icon3{
+    background-color: rgb(221, 182, 127);
+    width: 50px;
+    height: 50px;
+    margin-left: 82px;
+    margin-right: 30px;
+    border-radius: 10px;
+    position: absolute;
+    transition: box-shadow 0.3s;
+}
+#icon3:hover{
+    box-shadow: inset 0 0 0 5px rgb(231, 207, 175);
+}
+#icon3 img{
+    width: 100%;
+}
+#icon3 img:hover{
+    animation: movement 1s forwards;
+}
+@keyframes movement {
+    49%{
+        transform: translateX(100%);
+    }
+    50%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    51%{
+        opacity: 1;
+    }
+}
+
+/*Insta*/
+#insta{
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 56px;
+    border-radius: 15px;
+    position: absolute;
+}
+#insta img{
+    width: 100%;
+}
+#flash{
+    
+    width: 15px;
+    height: 15px;
+    margin-top: 35%;
+    margin-left: 35%;
+    position: absolute;
+    border-radius: 50%;
+}
+#flash:hover{
+    animation: flash 1.2s linear;
+}
+@keyframes flash{
+    0% {
+        background-color: #fffb00;
+        box-shadow: 0px 0px 0px #ffbb00, 0px 0px 50px #ffee00;
+    }
+    90%{
+        color: #484848;
+        box-shadow: 0 0 20px #ffbb00, 0 0 50px #ffee00;
+    }
+    100%{
+        color: #484848;
+        box-sizing: none;
+    }
+}
+/*zap*/
+#zap{
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 82px;
+    margin-right: 30px;
+    border-radius: 15px;
+    position: absolute;
+    transition: 2s;
+}
+#zap img{
+    width: 100%;
+}
+#notfic{
+    background-color: red;
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    position: absolute;
+    opacity: 1;
+    transition: 2s;
+}
+#not{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    position: absolute;
+    opacity: 0;
+    transition: 2s;
+}
+#not:hover{
+    opacity: 1;
+}
+
+/*Barra Google*/
+#google{
+    background-color: #484848;
+    width: 90%;
+    height: 30px;
+    margin-top: 200px;
+    border-radius: 10px;
+}
+#logog, #mic, #lens{
+    width: 20px;
+    position: absolute;
+    margin-top: 3.5px;
+}
+#logog{
+    margin-left: 7px;
+}
+#mic{
+    margin-left: 180px;
+}
+#lens{
+    margin-left: 215px;
+}
+#texto{
+    width: 150px;
+    height: 30px;
+    margin-left: 30px;
+    position: absolute;
+    background-color: #484848;
+    overflow: hidden;
+}   
+#texto h1{
+    top: 135px;
+    left: 35px;
+    font-size: 25px;
+    color: linear-gradient(to right, rgb(234, 67, 53), rgb(251, 188, 5), rgb(52, 168, 83), rgb(66, 133, 244));
+}
+#texto:after{
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    left: 0;
+    background-color: #484848; 
+    animation: typing 1.5s steps(10) infinite;
+}
+@keyframes typing {
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}
